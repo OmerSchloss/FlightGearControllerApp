@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background"
+    android:background="@mipmap/background"
     tools:context=".views.MainActivity">
 
     <LinearLayout
@@ -108,31 +108,53 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="70"
+            android:layout_weight="95"
+            android:weightSum="100"
             android:background="@color/black_60"
-            android:orientation="vertical" />
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/widget_joystick"
+                android:layout_width="290sp"
+                android:layout_height="290sp"
+                android:layout_gravity="center"
+                android:layout_weight="0" />
+
+            <TextView
+                android:id="@+id/text_throttle"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:rotation="-90"
+                android:text="@string/txt_throttle"
+                android:textColor="@color/black_60"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.Slider
+                android:layout_width="300sp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="-120sp"
+                android:layout_marginTop="140sp"
+                android:rotation="270"
+                android:background="@color/white_60"
+                android:value="0"
+                android:valueFrom="0"
+                android:valueTo="1" />
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="30"
+            android:layout_weight="5"
             android:orientation="vertical"
             android:background="@color/white_40"
             android:paddingTop="5sp"
             android:paddingBottom="5sp">
-            <TextView
-                android:id="@+id/text_throttle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_throttle"
-                android:textSize="18sp"
-                android:textColor="@color/black_60"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:paddingLeft="15sp"
-                android:paddingRight="15sp"
-                android:paddingTop="5sp"
-                android:paddingBottom="0sp"/>
+
 
             <TextView
                 android:id="@+id/text_rudder"
@@ -147,6 +169,12 @@
                 android:paddingRight="15sp"
                 android:paddingTop="5sp"
                 android:paddingBottom="0sp"/>
+            <com.google.android.material.slider.Slider
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:valueFrom="-1"
+                android:valueTo="1"
+                android:value="0" />
         </LinearLayout>
     </LinearLayout>
 
