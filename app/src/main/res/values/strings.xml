@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FlightGearController</string>
+    <string name="header_text">Flight Gear Controller</string>
+    <string name="ask_ip">Enter ip address:</string>
+    <string name="ask_port">Enter port:</string>
+    <string name="btn_connect">Connect To FlightGear</string>
+    <string name="txt_throttle">Throttle</string>
+    <string name="txt_rudder">Rudder</string>
+</resources>
