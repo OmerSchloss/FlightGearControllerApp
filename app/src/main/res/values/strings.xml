@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FlightGearController</string>
+    <string name="app_name">FlightGear\nController</string>
     <string name="header_text">Flight Gear Controller</string>
     <string name="ask_ip">Enter ip address:</string>
     <string name="ask_port">Enter port:</string>
