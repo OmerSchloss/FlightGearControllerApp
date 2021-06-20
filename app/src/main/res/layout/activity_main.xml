@@ -1,181 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@mipmap/background"
-    tools:context=".views.MainActivity">
 
-    <LinearLayout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.flightgearcontrollerapp.view_model.FGViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.setheightwidthpercentage_android_examples.com.MainActivity"
-        android:weightSum="100"
-        android:orientation="vertical">
+        android:background="@mipmap/background"
+        tools:context=".views.MainActivity">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:orientation="vertical" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="30sp"
-                android:paddingBottom="10sp"
-                android:text="@string/header_text"
-                android:textColor="@color/white"
-                android:textSize="41sp"
-                android:textStyle="bold|italic"
-                android:textAlignment="center"
-                android:gravity="center"/>
-            <TextView
-                android:id="@+id/text_ip"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ask_ip"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:paddingStart="15sp"
-                android:paddingEnd="15sp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"/>
-            <EditText
-                android:id="@+id/ip_address"
-                android:labelFor="@id/ip_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:digits="0123456789."
-                android:inputType="number|numberDecimal"
-                android:textSize="20sp"
-                android:textDirection="ltr"
-                android:textColor="@color/white"
-                android:theme="@android:style/Theme.Holo"
-                android:paddingLeft="15sp"
-                android:paddingRight="15sp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"
-                android:singleLine="true"
-                android:nextFocusForward="@+id/port_address"
-                android:importantForAutofill="no" />
-            <TextView
-                android:id="@+id/text_port"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ask_port"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:paddingLeft="15sp"
-                android:paddingRight="15sp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"/>
-            <EditText
-                android:id="@+id/port_address"
-                android:labelFor="@id/port_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:digits="0123456789"
-                android:inputType="number"
-                android:textSize="20sp"
-                android:textDirection="ltr"
-                android:theme="@android:style/Theme.Holo"
-                android:paddingLeft="15sp"
-                android:paddingRight="15sp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"
-
-                android:importantForAutofill="no"
-                android:singleLine="true" />
-
-            <Button
-                android:id="@+id/btn_connect"
-                android:textSize="23sp"
-                android:textAllCaps="false"
-                android:paddingLeft="20sp"
-                android:paddingRight="20sp"
-                android:paddingTop="12sp"
-                android:paddingBottom="12sp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_connect"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="95"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:weightSum="100"
-            android:background="@color/black_60"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/widget_joystick"
-                android:layout_width="290sp"
-                android:layout_height="290sp"
-                android:layout_gravity="center"
-                android:layout_weight="0" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_throttle"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30sp"
+                    android:paddingBottom="10sp"
+                    android:text="@string/header_text"
+                    android:textColor="@color/white"
+                    android:textSize="41sp"
+                    android:textStyle="bold|italic"
+                    android:textAlignment="center"
+                    android:gravity="center" />
 
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:rotation="-90"
-                android:text="@string/txt_throttle"
-                android:textColor="@color/black_60"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ask_ip"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp" />
 
-            <com.google.android.material.slider.Slider
-                android:layout_width="300sp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="-120sp"
-                android:layout_marginTop="140sp"
-                android:rotation="270"
-                android:background="@color/white_60"
-                android:value="0"
-                android:valueFrom="0"
-                android:valueTo="1" />
+                <EditText
+                    android:id="@+id/ip_address"
+                    android:labelFor="@id/ip_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789."
+                    android:inputType="number|numberDecimal"
+                    android:textSize="20sp"
+                    android:textDirection="ltr"
+                    android:textColor="@color/white"
+                    android:theme="@android:style/Theme.Holo"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:singleLine="true"
+                    android:nextFocusForward="@+id/port_address"
+                    android:importantForAutofill="no" />
 
+                <TextView
+                    android:id="@+id/text_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ask_port"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp" />
 
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/port_address"
+                    android:labelFor="@id/port_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:textDirection="ltr"
+                    android:theme="@android:style/Theme.Holo"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:orientation="vertical"
-            android:background="@color/white_40"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp">
+                    android:importantForAutofill="no"
+                    android:singleLine="true" />
 
+                <Button
+                    android:id="@+id/btn_connect"
+                    android:textSize="23sp"
+                    android:textAllCaps="false"
+                    android:paddingLeft="20sp"
+                    android:paddingRight="20sp"
+                    android:paddingTop="12sp"
+                    android:paddingBottom="12sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickConnect"
+                    android:text="@string/btn_connect" />
 
-            <TextView
-                android:id="@+id/text_rudder"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/throttle_slider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_rudder"
-                android:textSize="18sp"
-                android:textColor="@color/black_60"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:paddingLeft="15sp"
-                android:paddingRight="15sp"
+                android:orientation="horizontal"
+                android:layout_weight="80"
+                android:background="@color/black_60">
+
+                <RelativeLayout
+                    android:layout_width="360sp"
+                    android:layout_height="370sp">
+
+                    <RelativeLayout
+                        android:id="@+id/widget_joystick"
+                        android:layout_width="360sp"
+                        android:layout_height="360sp"
+                        android:layout_gravity="center" />
+                </RelativeLayout>
+
+                <GridLayout
+                    android:layout_width="100sp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_40">
+
+                    <TextView
+                        android:id="@+id/text_throttle"
+                        android:layout_width="100sp"
+                        android:layout_height="66sp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:gravity="center"
+                        android:text="@string/txt_throttle"
+                        android:textColor="@color/black_60"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.slider.Slider
+
+                        android:layout_width="320sp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_marginLeft="-110sp"
+                        android:layout_marginTop="120sp"
+                        android:rotation="270"
+                        android:value="0"
+                        android:valueFrom="0"
+                        android:valueTo="1" />
+                </GridLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_40"
+                android:orientation="vertical"
                 android:paddingTop="5sp"
-                android:paddingBottom="0sp"/>
-            <com.google.android.material.slider.Slider
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:valueFrom="-1"
-                android:valueTo="1"
-                android:value="0" />
-        </LinearLayout>
-    </LinearLayout>
+                android:paddingBottom="5sp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/text_rudder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="15sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="15sp"
+                    android:paddingBottom="0sp"
+                    android:text="@string/txt_rudder"
+                    android:textColor="@color/black_60"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.slider.Slider
+                    android:layout_width="390sp"
+                    android:layout_marginLeft="30sp"
+                    android:layout_height="0sp"
+                    android:layout_weight="0"
+                    android:value="0"
+                    android:valueFrom="-1"
+                    android:valueTo="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
