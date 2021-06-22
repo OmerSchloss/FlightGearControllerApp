@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flightgearcontrollerapp.R
@@ -27,11 +28,19 @@ class MainActivity : AppCompatActivity() {
             if (!isConnected) {
                 val editTextIP = findViewById<EditText>(ip_address)
                 val editTextPort = findViewById<EditText>(port_address)
+                if (editTextIP.text.toString() ==""){
+                    Toast.makeText(applicationContext, "Please write IP address", Toast.LENGTH_SHORT).show()
+                    return
+                }
+                if (editTextPort.text.toString()==""){
+                    Toast.makeText(applicationContext, "Please write port address", Toast.LENGTH_SHORT).show()
+                    return
+                }
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle(getString(R.string.alert_dialog_flightgear_connection))
                 builder.setMessage(getString(R.string.alert_instruction))
                 builder.setPositiveButton(getString(R.string.ok_btn)){ dialog, _ ->
-                    if ((editTextIP.text.toString() !="")&&(editTextPort.text.toString()!="")&&(vmConnection.connectToFG(editTextIP.text.toString(),editTextPort.text.toString()))) {
+                    if (vmConnection.connectToFG(editTextIP.text.toString(),editTextPort.text.toString())) {
                         btnConnection.setText(R.string.disconnect)
                         isConnected = true
                     } else {

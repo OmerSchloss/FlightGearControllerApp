@@ -8,7 +8,7 @@
     <string name="txt_rudder">Rudder</string>
     <string name="disconnect">disconnect</string>
     <string name="alert_dialog_flightgear_connection">FlightGear Connection</string>
-    <string name="alert_instruction">For connecting to FlightGear App,\nFirst open the app.\nThen, copy these lines to Setting-> Additional Setting:\n\n &#45;&#45;generic=socket,in,10,\'ip\',\'port\',tcp,playback_small \n &#45;&#45;fdm=null\n\n and now just press fly!</string>
+    <string name="alert_instruction">For connecting to FlightGear App,\nFirst open the app.\nThen, copy these lines to Setting-> Additional Setting:\n\n &#45;&#45;telnet=socket,in,10,\'ip\',\'port\',tcp,playback_small \n\n and now just press fly!</string>
     <string name="ok_btn">continue</string>
     <string name="alert_title">FlightGear Connection</string>
     <string name="connection_failed">Connection failed!</string>
