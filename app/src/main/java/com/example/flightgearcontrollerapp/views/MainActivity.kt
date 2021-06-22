@@ -1,7 +1,9 @@
 package com.example.flightgearcontrollerapp.views
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -24,6 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickConnect(view: View) {
         if (view.id == btn_connect) {
+            val iMm = this.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+            iMm.hideSoftInputFromWindow(view.windowToken, 0)
+            view.clearFocus()
             val btnConnection = findViewById<Button>(btn_connect)
             if (!isConnected) {
                 val editTextIP = findViewById<EditText>(ip_address)
