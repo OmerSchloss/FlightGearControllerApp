@@ -15,8 +15,6 @@ import com.example.flightgearcontrollerapp.view_model.FGViewModel
 
 
 class MainActivity : AppCompatActivity() {
-
-    //private var vmConnection: FGViewModel = FGViewModel()
     private var isConnected = false
     private val vmConnection = FGViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
