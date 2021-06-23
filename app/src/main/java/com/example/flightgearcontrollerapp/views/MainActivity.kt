@@ -12,14 +12,45 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.flightgearcontrollerapp.R
 import com.example.flightgearcontrollerapp.R.id.*
 import com.example.flightgearcontrollerapp.view_model.FGViewModel
+import com.google.android.material.slider.Slider
 
 
 class MainActivity : AppCompatActivity() {
     private var isConnected = false
     private val vmConnection = FGViewModel()
+    private lateinit var throttleSlider: Slider
+    private lateinit var rudderSlider: Slider
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        throttleSlider = findViewById(slider_throttle)
+        rudderSlider = findViewById(slider_rudder)
+        throttleSlider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: Slider) {
+                vmConnection.setThrottle(slider.value)
+            }
+            override fun onStopTrackingTouch(slider: Slider) {
+                vmConnection.setThrottle(slider.value)
+            }
+        })
+
+        throttleSlider.addOnChangeListener { _, value, _ ->
+             vmConnection.setThrottle(value)
+        }
+        rudderSlider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: Slider) {
+                vmConnection.setRudder(slider.value)
+            }
+            override fun onStopTrackingTouch(slider: Slider) {
+                vmConnection.setRudder(slider.value)
+            }
+        })
+
+        rudderSlider.addOnChangeListener { _, value, _ ->
+            vmConnection.setRudder(value)
+        }
+
+
     }
 
     fun onClickConnect(view: View) {
