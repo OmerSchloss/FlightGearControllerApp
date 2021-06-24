@@ -13,6 +13,7 @@ import com.example.flightgearcontrollerapp.R
 import com.example.flightgearcontrollerapp.R.id.*
 import com.example.flightgearcontrollerapp.view_model.FGViewModel
 import com.google.android.material.slider.Slider
+import com.jackandphantom.joystickview.JoyStickView
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private val vmConnection = FGViewModel()
     private lateinit var throttleSlider: Slider
     private lateinit var rudderSlider: Slider
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         rudderSlider.addOnChangeListener { _, value, _ ->
             vmConnection.setRudder(value)
         }
-
+       // var joyStick = JoyStick(findViewById(widget_joystick))
 
     }
 

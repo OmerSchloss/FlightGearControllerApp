@@ -50,6 +50,18 @@ class FGModel {
         }
     }
 
+    fun setAileron(fl: Float) {
+        if(isConnected) {
+            telnetClient.updateAileron(fl)
+        }
+    }
+
+    fun setElevator(fl: Float) {
+        if(isConnected) {
+            telnetClient.updateElevator(fl)
+        }
+    }
+
 }
 
 

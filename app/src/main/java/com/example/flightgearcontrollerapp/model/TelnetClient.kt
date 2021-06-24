@@ -13,16 +13,15 @@ class TelnetClient{
     private lateinit var executor: ExecutorService
 
     fun connect(ipAddress: String, portAddress: Int): Boolean {
-        return try {
+         try {
             client = Socket()
             client.connect(InetSocketAddress(ipAddress, portAddress),5000)
             output = PrintWriter(client.getOutputStream(), true)
-            executor = Executors.newSingleThreadExecutor();
-            true
+            executor = Executors.newSingleThreadExecutor()
+            return true
         }catch (e: Exception){
             e.printStackTrace()
             throw RuntimeException(e)
-            false
         }
     }
 
@@ -41,4 +40,13 @@ class TelnetClient{
     fun updateRudder(fl: Float) {
         executor.execute { output.print("set /controls/flight/rudder $fl\r\n");output.flush() }
     }
+
+    fun updateAileron(fl: Float) {
+        executor.execute { output.print("set /controls/flight/aileron $fl\r\n");output.flush() }
+    }
+
+    fun updateElevator(fl: Float) {
+        executor.execute { output.print("set /controls/flight/elevator $fl\r\n");output.flush() }
+    }
+
 }

@@ -8,10 +8,7 @@
         <variable
             name="viewModel"
             type="com.example.flightgearcontrollerapp.view_model.FGViewModel" />
-        <variable
-            name="joystickVM"
-            type="com.example.flightgearcontrollerapp.view_model.JoyStickVM"/>
-        <variable
+       <variable
             name="model"
             type="com.example.flightgearcontrollerapp.model.FGModel"/>
     </data>
@@ -140,13 +137,10 @@
                         android:id="@+id/widget_joystick"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginBottom="0dp"
                         app:innerCircleColor="#f6FFFFFF"
-                        app:innerCircleImage="@drawable/ic_baseline_airplanemode_active_24"
+                        app:innerCircleImage="@drawable/ic_baseline_airplane_mode_active_24"
                         app:outerCircleBorderColor="#fff"
                         app:outerCircleBorderWidth="5"
                         app:outerCircleColor="@color/navy_blue_40"
