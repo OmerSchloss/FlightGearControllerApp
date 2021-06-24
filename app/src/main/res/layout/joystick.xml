@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.jackandphantom.joystickview.JoyStickView
+        android:id="@+id/widget_joystick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:innerCircleColor="#f6FFFFFF"
+        app:innerCircleImage="@drawable/ic_baseline_airplane_mode_active_24"
+        app:outerCircleBorderColor="#fff"
+        app:outerCircleBorderWidth="5"
+        app:outerCircleColor="@color/navy_blue_40"
+        app:shadowColor="#000"
+        app:shadowRadius="7" />
+</LinearLayout>

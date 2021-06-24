@@ -127,26 +127,14 @@
                 android:background="@color/black_60"
                 android:baselineAligned="false">
 
-                <RelativeLayout
+
+                <include
                     android:layout_height="match_parent"
                     android:layout_width="0dp"
                     android:layout_weight="75"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    layout="@layout/joystick" />
 
-                    <com.jackandphantom.joystickview.JoyStickView
-                        android:id="@+id/widget_joystick"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentBottom="true"
-                        app:innerCircleColor="#f6FFFFFF"
-                        app:innerCircleImage="@drawable/ic_baseline_airplane_mode_active_24"
-                        app:outerCircleBorderColor="#fff"
-                        app:outerCircleBorderWidth="5"
-                        app:outerCircleColor="@color/navy_blue_40"
-                        app:shadowColor="#000"
-                        app:shadowRadius="7" />
-                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_height="match_parent"

@@ -15,7 +15,7 @@ class TelnetClient{
     fun connect(ipAddress: String, portAddress: Int): Boolean {
          try {
             client = Socket()
-            client.connect(InetSocketAddress(ipAddress, portAddress),5000)
+            client.connect(InetSocketAddress(ipAddress, portAddress),2000)
             output = PrintWriter(client.getOutputStream(), true)
             executor = Executors.newSingleThreadExecutor()
             return true
@@ -41,11 +41,11 @@ class TelnetClient{
         executor.execute { output.print("set /controls/flight/rudder $fl\r\n");output.flush() }
     }
 
-    fun updateAileron(fl: Float) {
+    fun updateAileron(fl: Double) {
         executor.execute { output.print("set /controls/flight/aileron $fl\r\n");output.flush() }
     }
 
-    fun updateElevator(fl: Float) {
+    fun updateElevator(fl: Double) {
         executor.execute { output.print("set /controls/flight/elevator $fl\r\n");output.flush() }
     }
 

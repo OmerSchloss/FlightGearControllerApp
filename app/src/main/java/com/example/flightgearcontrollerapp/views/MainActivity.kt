@@ -13,7 +13,6 @@ import com.example.flightgearcontrollerapp.R
 import com.example.flightgearcontrollerapp.R.id.*
 import com.example.flightgearcontrollerapp.view_model.FGViewModel
 import com.google.android.material.slider.Slider
-import com.jackandphantom.joystickview.JoyStickView
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,10 +20,12 @@ class MainActivity : AppCompatActivity() {
     private val vmConnection = FGViewModel()
     private lateinit var throttleSlider: Slider
     private lateinit var rudderSlider: Slider
+    private lateinit var joyStick:JoyStick
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        joyStick = JoyStick(vmConnection.getModel(), findViewById(widget_joystick))
         throttleSlider = findViewById(slider_throttle)
         rudderSlider = findViewById(slider_rudder)
         throttleSlider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
@@ -35,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 vmConnection.setThrottle(slider.value)
             }
         })
-
         throttleSlider.addOnChangeListener { _, value, _ ->
              vmConnection.setThrottle(value)
         }
@@ -47,12 +47,9 @@ class MainActivity : AppCompatActivity() {
                 vmConnection.setRudder(slider.value)
             }
         })
-
         rudderSlider.addOnChangeListener { _, value, _ ->
             vmConnection.setRudder(value)
         }
-       // var joyStick = JoyStick(findViewById(widget_joystick))
-
     }
 
     fun onClickConnect(view: View) {
@@ -101,9 +98,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-
-
-
 }
 

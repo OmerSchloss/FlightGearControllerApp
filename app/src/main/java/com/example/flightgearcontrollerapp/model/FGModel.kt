@@ -4,8 +4,6 @@ package com.example.flightgearcontrollerapp.model
 class FGModel {
     private val telnetClient = TelnetClient()
     private var isConnected =false
-    private var isExceptionOccurred = false
-    private var isTouchingJoystick = false
 
     fun connect(ipAddress: String, portAddress: String): Boolean {
         var res = false
@@ -17,14 +15,9 @@ class FGModel {
                 throw RuntimeException(e)
             }
         }
-        val h = Thread.UncaughtExceptionHandler { _, _ -> isExceptionOccurred = true;res= false }
-        t.uncaughtExceptionHandler = h
         t.start()
         try {
             t.join()
-            if (!isExceptionOccurred) {
-                this.isTouchingJoystick = false
-            }
         } catch (e: Exception) {
             e.printStackTrace()
             return false
@@ -50,13 +43,13 @@ class FGModel {
         }
     }
 
-    fun setAileron(fl: Float) {
+    fun setAileron(fl: Double) {
         if(isConnected) {
             telnetClient.updateAileron(fl)
         }
     }
 
-    fun setElevator(fl: Float) {
+    fun setElevator(fl: Double) {
         if(isConnected) {
             telnetClient.updateElevator(fl)
         }

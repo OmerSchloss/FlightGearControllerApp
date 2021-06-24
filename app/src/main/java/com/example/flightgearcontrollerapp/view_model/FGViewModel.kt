@@ -11,7 +11,9 @@ class FGViewModel : ViewModel() {
         }
         return false
     }
-
+    fun getModel() : FGModel{
+        return model
+    }
     fun disconnectFromFG() {
         model.disconnect()
     }
@@ -22,13 +24,5 @@ class FGViewModel : ViewModel() {
 
     fun setRudder(fl: Float) {
         model.setRudder(fl)
-    }
-
-    fun setAileron(fl: Float) {
-        model.setAileron(fl)
-    }
-
-    fun setElevator(fl: Float) {
-        model.setElevator(fl)
     }
 }
