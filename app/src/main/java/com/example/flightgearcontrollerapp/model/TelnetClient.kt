@@ -13,15 +13,15 @@ class TelnetClient{
     private lateinit var executor: ExecutorService
 
     fun connect(ipAddress: String, portAddress: Int): Boolean {
-         try {
+        return try {
             client = Socket()
             client.connect(InetSocketAddress(ipAddress, portAddress),2000)
             output = PrintWriter(client.getOutputStream(), true)
             executor = Executors.newSingleThreadExecutor()
-            return true
+            true
         }catch (e: Exception){
             e.printStackTrace()
-            throw RuntimeException(e)
+            false
         }
     }
 
