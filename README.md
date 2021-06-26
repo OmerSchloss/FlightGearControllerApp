@@ -15,6 +15,8 @@ Before running the app you should do the following steps:
 
 ![App](https://user-images.githubusercontent.com/60196825/123525379-dcc35180-d6d8-11eb-8a40-428ac9f3342f.png)
 
+![Msg](https://user-images.githubusercontent.com/60196825/123525430-417eac00-d6d9-11eb-8c10-2e22e527ae12.png)
+
 ### Run
 * Run the App in your favourite IDE
 * Put your computer IP in the field and put ``6400`` in port field.
