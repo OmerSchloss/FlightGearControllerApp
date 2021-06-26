@@ -1,5 +1,12 @@
 # Android Joystick App
 
+[Demo](https://youtu.be/lIkFrhPQ-Yg)
+
+#### Submitters:
+Omer schlos - 12345678
+
+Avraham Bar Ilan - 205937949
+
 ## Summary
 This project is a remote control joystick that connect "FlightGear" simulator and fly the plane remotely.<br/> 
 The project implemented using MVVM architecture and written with kotlin.<br/>
