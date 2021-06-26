@@ -1,10 +1,10 @@
 # Android Joystick App
 
-### Summary
+## Summary
 This project is a remote control joystick that connect "FlightGear" simulator and fly the plane remotely.<br/> 
 The project implemented using MVVM architecture and written with kotlin.<br/>
 
-### Setup
+## Setup
 Before running the app you should do the following steps:
 * Clone this repositories.
 * Install Android Studio.
@@ -17,14 +17,14 @@ Before running the app you should do the following steps:
 
 ![Msg](https://user-images.githubusercontent.com/60196825/123525430-417eac00-d6d9-11eb-8c10-2e22e527ae12.png)
 
-### Run
+## Run
 * Run the App in your favourite IDE
 * Put your computer IP in the field and put ``6400`` in port field.
 * press Connect To FlightGear and hit the Throttle up :airplane:.
 * Enjoy your flight.
 
-### UML
+## UML
 ![UML](https://user-images.githubusercontent.com/60196825/123525299-3a0ad300-d6d8-11eb-917c-306fd31477f5.jpg)
 
-### Demo presentation
-#### todo
+## Demo presentation
+### todo
