@@ -28,3 +28,4 @@ Before running the app you should do the following steps:
 
 ## Demo presentation
 [Here is a nice presentation of the project](https://youtu.be/lIkFrhPQ-Yg)
+(flight starts at 2:45)
