@@ -20,7 +20,7 @@ Before running the app you should do the following steps:
 * Enjoy your flight.
 
 ### UML
-#### todo
+![UML](https://user-images.githubusercontent.com/60196825/123525299-3a0ad300-d6d8-11eb-917c-306fd31477f5.jpg)
 
 ### Demo presentation
 #### todo
