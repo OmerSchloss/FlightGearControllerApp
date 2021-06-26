@@ -13,10 +13,12 @@ Before running the app you should do the following steps:
 ``--telnet=socket,in,10,127.0.0.1,6400,tcp``.
 * Press Fly and hit the Autostart button.
 
+![App](https://user-images.githubusercontent.com/60196825/123525379-dcc35180-d6d8-11eb-8a40-428ac9f3342f.png)
+
 ### Run
 * Run the App in your favourite IDE
 * Put your computer IP in the field and put ``6400`` in port field.
-* press Connect and hit the Throttle up :airplane:.
+* press Connect To FlightGear and hit the Throttle up :airplane:.
 * Enjoy your flight.
 
 ### UML
