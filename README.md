@@ -12,12 +12,13 @@ This project is a remote control joystick that connect "FlightGear" simulator an
 
 The project implemented in MVVM architecture and written with kotlin.
 
-## Setup
 You can download a .apk file of the app [from here](https://github.com/OmerSchloss/FlightGearControllerApp/blob/master/FlightGearController.apk)
 
-Before running the app you should do the following steps:
-* Clone this repositories.
-* Install Android Studio.
+Or you can clone this repo and run it with Android Emulator on your computer
+
+
+## Setup
+
 * Install Flight Gear Simulator ([Download from here](https://www.flightgear.org/download/)).
 * Inside FlightGear go to Setting -> Additional Settings and write:
 ``--telnet=socket,in,10,127.0.0.1,6400,tcp``.
