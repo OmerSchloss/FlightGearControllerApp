@@ -8,8 +8,9 @@ Omer schlos - 313301764
 Avraham Bar Ilan - 205937949
 
 ## Summary
-This project is a remote control joystick that connect "FlightGear" simulator and fly the plane remotely.<br/> 
-The project implemented using MVVM architecture and written with kotlin.<br/>
+This project is a remote control joystick that connect "FlightGear" simulator and control the plane remotely.
+
+The project implemented using MVVM architecture and written with kotlin.
 
 ## Setup
 Before running the app you should do the following steps:
