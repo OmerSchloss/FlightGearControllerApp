@@ -20,6 +20,7 @@ Or you can clone this repo and run it with Android Emulator on your computer.
 
 
 ## Setup
+ App is compatible with Android 8.0 (SDK 26)
 
 * Install Flight Gear Simulator ([Download from here](https://www.flightgear.org/download/)).
 * Inside FlightGear go to Setting -> Additional Settings and write:
