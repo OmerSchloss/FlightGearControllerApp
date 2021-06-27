@@ -12,11 +12,11 @@ This project is a remote control joystick that connect "FlightGear" simulator an
 
 The project implemented in MVVM architecture and written with kotlin.
 
-You can download a .apk file of the app [from here](https://github.com/OmerSchloss/FlightGearControllerApp/blob/master/FlightGearController.apk) and look for this nice icon
+You can download a .apk file of the app [from here](https://github.com/OmerSchloss/FlightGearControllerApp/blob/master/FlightGearController.apk) and look for this nice icon:
 
 ![WhatsApp Image 2021-06-27 at 14 54 04](https://user-images.githubusercontent.com/60196825/123543567-d7f1b280-d757-11eb-8cb6-a51632a78c5f.jpeg)
 
-Or you can clone this repo and run it with Android Emulator on your computer
+Or you can clone this repo and run it with Android Emulator on your computer.
 
 
 ## Setup
@@ -37,7 +37,7 @@ Or you can clone this repo and run it with Android Emulator on your computer
 * Enjoy your flight.
 
 ## UML
-As you can see the code is divided into 3 main sections: View, ViewModel and Model
+As you can see the code is divided into 3 main sections: View, ViewModel and Model.
 ![UML](https://user-images.githubusercontent.com/60196825/123525299-3a0ad300-d6d8-11eb-917c-306fd31477f5.jpg)
 
 ## Demo presentation
