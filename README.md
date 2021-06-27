@@ -10,7 +10,7 @@ Avraham Bar Ilan - 205937949
 ## Summary
 This project is a remote control joystick that connect "FlightGear" simulator and control the plane remotely.
 
-The project implemented using MVVM architecture and written with kotlin.
+The project implemented in MVVM architecture and written with kotlin.
 
 ## Setup
 Before running the app you should do the following steps:
@@ -32,6 +32,7 @@ Before running the app you should do the following steps:
 * Enjoy your flight.
 
 ## UML
+As you can see code is divided into 3 main sections: View, ViewModel and Model
 ![UML](https://user-images.githubusercontent.com/60196825/123525299-3a0ad300-d6d8-11eb-917c-306fd31477f5.jpg)
 
 ## Demo presentation
