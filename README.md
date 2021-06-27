@@ -3,7 +3,7 @@
 [Demo](https://youtu.be/lIkFrhPQ-Yg)
 
 #### Submitters:
-Omer schlos - 313301764
+Omer Schloss - 313301764
 
 Avraham Bar Ilan - 205937949
 
