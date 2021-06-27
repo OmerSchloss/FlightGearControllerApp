@@ -1,4 +1,4 @@
-# Android Joystick App
+# Android Joystick App :airplane:
 
 [Demo](https://youtu.be/lIkFrhPQ-Yg)
 
@@ -33,7 +33,7 @@ Or you can clone this repo and run it with Android Emulator on your computer.
 ## Run
 * Run the App.
 * Put your computer IP in the field and put ``6400`` in port field.
-* press Connect To FlightGear and hit the Throttle up :airplane:.
+* press Connect To FlightGear and hit the Throttle up.
 * Enjoy your flight.
 
 ## UML
